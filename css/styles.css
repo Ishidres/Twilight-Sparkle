@@ -1,0 +1,189 @@
+body {
+  background: linear-gradient(270deg, #363b74, #673888, #ef4f91, #c79dd7, #4d1b7b);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+.middle-bar {
+  background-color:rgba(0, 0, 0, 0.5);
+  top: 30%;
+  bottom: 30%;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  position: fixed;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
+}
+
+.text {
+  left: 16%;
+  right: 30%;
+  top: 45%;
+  bottom: 40%;
+  max-width: 54%;
+  position: fixed;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-size: 4vmin !important;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9996;
+  font-family: 'Lato', sans-serif;  
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #c79dd7;
+  color: black;
+  -webkit-transition: background-color 0.4s linear, color 0.4s;
+  -ms-transition: background-color 0.4s linear, color 0.4s;
+  transition: background-color 0.4s linear, color 0.4s;
+}
+
+.navbar a.active {
+  background-color: #ef4f91;
+  color: white;
+}
+
+.buttons {
+  top: 61%;
+  left: 15%;
+  position: fixed;
+}
+
+.button {
+  float: left;
+  margin-right: 5px;
+  border: none;
+  background: #673888;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;  
+  margin: 4px 5px;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ef4f91;
+}
+
+.logo {
+  left: 15%;
+  max-height: 15%;  
+  position: fixed;
+  width: auto;
+}
+
+.profile-picture {
+  right: 12%;
+  width: 15%;
+  top: 50%;
+  transform: translateY(-50%);  height: auto;  
+  margin: 0 auto;
+  position: absolute;  
+  background-image: url('https://twilightbot.eu/images/Twilight-Small.png');
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+
+.github-buttons {
+  left: 10px;
+  top: 40px;
+  position: fixed;
+}
+
+.ad-banner {
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  z-index: auto;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .logo {
+    max-width: 80%;
+    position: fixed;
+    width: auto;
+  }
+  .middle-bar {
+    top: 20%;
+    bottom: 20%;
+  }
+  .text {
+    font-size: 4vmin !important;
+    right: 25%;
+    top: 35%;
+    bottom: auto;
+    height: 100%;
+  }
+  .profile-picture {
+    right: 5%;
+    max-width: 20%;    
+  }
+  .buttons {
+    top: auto;
+    bottom: 20%;
+    position: fixed;
+  }
+  .button {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+}
