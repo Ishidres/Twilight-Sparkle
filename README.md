@@ -9,7 +9,7 @@ Just, please don't claim it as your own creation and keep to the included licens
 
 Want to use my Discord Bot? You can invite it [here](https://twilightbot.eu/invite).
 
-![Screenshot of the Leaderboard Page](https://twilightbot.eu/images/Screenshot-Homepage.png)
+![Screenshot of the Website](https://twilightbot.eu/images/Screenshot-Homepage.png)
 
 # Examples
 
