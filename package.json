@@ -1,6 +1,6 @@
 {
   "name": "twilight-sparkle",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Home page of my Discord Bot Twilight Sparkle containing top features, important links, etc.",
   "main": "index.html",
   "scripts": {
