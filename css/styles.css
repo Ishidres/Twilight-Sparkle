@@ -1,16 +1,18 @@
 body {
   background: linear-gradient(270deg, #363b74, #673888, #ef4f91, #c79dd7, #4d1b7b);
   background-size: 1000% 1000%;
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  -o-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  -webkit-animation: bgAnimation 30s ease infinite;
+  -moz-animation: bgAnimation 30s ease infinite;
+  -o-animation: bgAnimation 30s ease infinite;
+  animation: bgAnimation 30s ease infinite;
 }
+
+/* Content */
 
 .middle-bar {
   background-color:rgba(0, 0, 0, 0.5);
-  top: 30%;
-  bottom: 30%;
+  top: 25%;
+  bottom: 25%;
   left: 0px;
   right: 0px;
   width: 100%;
@@ -22,54 +24,41 @@ body {
 
 .text {
   left: 16%;
-  right: 30%;
-  top: 45%;
-  bottom: 40%;
-  max-width: 54%;
-  position: fixed;
+  max-width: 55%;
+  margin-top: 20px;
+  position: relative;
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
-  font-size: 4vmin !important;
+  font-size: 2em;
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9996;
-  font-family: 'Lato', sans-serif;  
+.logo {
+  left: 15%;
+  margin-top: 20px;
+  position: relative;
+  width: 52%;
+  height: auto;
 }
 
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  font-weight: bolder;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  background: #c79dd7;
-  color: black;
-  -webkit-transition: background-color 0.4s linear, color 0.4s;
-  -ms-transition: background-color 0.4s linear, color 0.4s;
-  transition: background-color 0.4s linear, color 0.4s;
-}
-
-.navbar a.active {
-  background-color: #ef4f91;
-  color: white;
+.profile-picture {
+  left: 75%;
+  top: 50%;
+  width: 16%;
+  height: auto;
+  transform: translateY(-50%);  height: auto;  
+  position: fixed;  
+  background-image: url('https://twilightbot.eu/images/Twilight-Small.png');
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 }
 
 .buttons {
-  top: 61%;
   left: 15%;
-  position: fixed;
+  margin-top: 20px;
+  position: relative;
+  overflow:  auto;
 }
 
 .button {
@@ -96,26 +85,45 @@ body {
   background-color: #ef4f91;
 }
 
-.logo {
-  left: 15%;
-  max-height: 15%;  
+/* Navigation Bar */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
   position: fixed;
-  width: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 46px;
+  z-index: 9996;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 18px;
 }
 
-.profile-picture {
-  right: 12%;
-  width: 15%;
-  top: 50%;
-  transform: translateY(-50%);  height: auto;  
-  margin: 0 auto;
-  position: absolute;  
-  background-image: url('https://twilightbot.eu/images/Twilight-Small.png');
-  background-size: 100% 100%;
-  background-position: center;
-  border-radius: 50%;
-  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 16px;
+  font-weight: bolder;
+  text-decoration: none;
 }
+
+.navbar a:hover {
+  background: #c79dd7;
+  color: black;
+  -webkit-transition: background-color 0.4s linear, color 0.4s;
+  -ms-transition: background-color 0.4s linear, color 0.4s;
+  transition: background-color 0.4s linear, color 0.4s;
+}
+
+.navbar a.active {
+  background-color: #ef4f91;
+  color: white;
+}
+
+/* Third-Party Usage */
 
 .github-buttons {
   left: 10px;
@@ -123,29 +131,24 @@ body {
   position: fixed;
 }
 
-.ad-banner {
-  right: 10px;
-  bottom: 10px;
-  position: fixed;
-  z-index: auto;
-}
+/* Animations */
 
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes bgAnimation {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
-@-moz-keyframes AnimationName {
+@-moz-keyframes bgAnimation {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
-@-o-keyframes AnimationName {
+@-o-keyframes bgAnimation {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
-@keyframes AnimationName {
+@keyframes bgAnimation {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
@@ -157,33 +160,32 @@ body {
     max-width: 100%;
     overflow-x: hidden;
   }
+
   .logo {
-    max-width: 80%;
-    position: fixed;
-    width: auto;
+    left: 5%;
   }
+
+  .github-buttons {
+    display: none;
+  }
+
+  .text {
+    left: 10%;
+    font-size: 5vw;
+  }
+
   .middle-bar {
     top: 20%;
     bottom: 20%;
   }
-  .text {
-    font-size: 4vmin !important;
-    right: 25%;
-    top: 35%;
-    bottom: auto;
-    height: 100%;
-  }
-  .profile-picture {
-    right: 5%;
-    max-width: 20%;    
-  }
+  
   .buttons {
-    top: auto;
-    bottom: 20%;
-    position: fixed;
+    left: 5%;
   }
+
   .button {
     font-size: 16px;
     padding: 4px 8px;
+    left: 5%;
   }
 }
